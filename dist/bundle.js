@@ -1,0 +1,1 @@
+(()=>{"use strict";class s{constructor(){consol.log("Ciao dal costruttore della classe drag...")}}new class extends s{constructor(){super(),consol.log("Ciao dal costruttore della classe note...")}}})();
