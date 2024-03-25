@@ -1,33 +1,3 @@
-const h1 = document.createElement("h1");
-h1.textContent = "Hacker  Service News";
-
-const p1 = document.createElement("h2");
-p1.textContent = "Hello there! Here are the latest news about the tech's world.";
-p1.setAttribute('class', 'advanced');
-
-const p2 = document.createElement("h3");
-p2.textContent = `Click on the following links 
-to read the articles and if you want more news 
-click on the button "load more" at the end of the page.
-You won't be attacked from any virus!`
-p2.setAttribute('class', 'advanced');
-
-const newsContainer = document.createElement("div");
-newsContainer.setAttribute("id", "news-container")
-const loadMoreBtn = document.createElement("button");
-loadMoreBtn.setAttribute("id", "load-more-btn")
-loadMoreBtn.textContent = "Load More"
-
-const footer = document.createElement("footer")
-footer.innerHTML = "<p>© Giorgio Arcamone 2024 All rights reserved</p>"
-
-document.querySelector('body').append(h1);
-document.querySelector('body').append(p1);
-document.querySelector('body').append(p2);
-document.querySelector('body').append(newsContainer);
-document.querySelector('body').append(loadMoreBtn);
-document.querySelector('body').append(footer);
-
 document.addEventListener('DOMContentLoaded', () => {
     const newsContainer = document.getElementById('news-container')
     const loadMoreBtn = document.getElementById('load-more-btn')

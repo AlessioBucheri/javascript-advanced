@@ -2,8 +2,37 @@
     box-sizing: border-box;
     margin: 0;
     padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #6e9564;
+    background-color: #00916e;
+    color: #feefe5;
+}
+
+#header {
+    display: flex; /* Utilizza flexbox */
+    align-items: center; /* Allinea gli elementi verticalmente */
+    padding: 20px 0;
+    /* border: #ffd000 3px solid;
+    border-style: double;*/
+    box-shadow: #242318 5px 5px 5px;
+    background-color: #242318;
+    
+}
+#logo {
+    width: 100px; /* Imposta la larghezza desiderata per il logo */
+    height: auto;
+    margin-right: 20px; /* Aggiungi spazio a destra del logo */
+    box-shadow: #242318 2px 2px;
+    background-color: #feefe591;
+}
+#titleHeader {
+    font-size: 40px; /* Imposta la dimensione del titolo */
+    margin: 0; /* Rimuovi il margine per il titolo */
+    text-shadow: #242318 2px 2px;
+    background-color: none;
+}
+#subtitleHeader {
+    font-size: 20px; /* Imposta la dimensione del sottotitolo */
+    margin: 0; /* Rimuovi il margine per il sottotitolo */
+    text-shadow: #242318 2px 2px;
 }
 
 .advanced {
@@ -22,7 +51,7 @@
     justify-content: center;
     align-items: center;
     float: center;
-    border: 2px solid #000;
+    border: 2px solid #ffcf00;
     cursor: pointer;
     padding: 20px;
     text-align: center;
@@ -30,10 +59,10 @@
 }
 
 #load-more-btn:hover {
-    background-color: #242318; /* Red */
-    color: white;
+    background-color: #feefe5; /* Red */
+    color: #ffcf00;
   }
-
+  
 #load-more-btn:active {
     background-color: white;
     transition: 0.2s;
@@ -41,6 +70,8 @@
   
 
 footer {
+    border: #ffd000 7px solid;
+    border-style: double;
     float: center;
     height: 50px;
     padding-top: 30px;
