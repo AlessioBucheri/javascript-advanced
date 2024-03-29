@@ -8,7 +8,7 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(158, 158, 158);
     color: black;
     display: flex;
     flex-direction: column;
@@ -43,8 +43,12 @@ body {
     border-style: none solid none;
     width: 75%;
 }
-#news {        
-    font-size: 50px;
+#news-1 {        
+    font-size: 30px;
+}
+#news-description {
+    text-align: center;
+    font-size: 30px;
 }
 #news-container {
     justify-content: center;
@@ -60,7 +64,6 @@ body {
     color: #242318; 
 }
 #load-more-btn {
-    border-radius: 20px;
     display: block;
     margin: 0 auto;
     margin-top: 5px;
@@ -69,23 +72,22 @@ body {
     justify-content: center;
     align-items: center;
     float: center;
-    border: 2px solid #ffcf00;
+    border: 2px solid rgb(8, 8, 138);
     cursor: pointer;
     padding: 20px;
     text-align: center;
     transition-duration: 0.5s;
+    background-color: rgb(158, 158, 158);
 }
 #load-more-btn:hover {
-    background-color: #feefe5; /* Red */
-    color: #ffcf00;
+    background-color: rgb(8, 8, 138); /* Red */
+    color: white;
 }  
 #load-more-btn:active {
-    background-color: white;
+    background-color: rgb(158, 158, 158);
     transition: 0.2s;
 }  
 footer {
-    border: #ffd000 7px solid;
-    border-style: double;
     float: center;
     height: 50px;
     padding-top: 30px;
