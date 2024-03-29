@@ -43,7 +43,7 @@ body {
     border-style: none solid none;
     width: 75%;
 }
-#news-1 {        
+#news {        
     font-size: 30px;
 }
 #news-description {
@@ -168,5 +168,16 @@ footer {
     #news {        
         font-size: 30px;
     }
-    
+    #news-description {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    #description {
+        width: 95%;
+        padding: 0 10px;
+    }
+    #news-container {
+        width: 95%;
+        padding: 0 10px;   
+    }
 }
