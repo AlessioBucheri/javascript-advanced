@@ -2,37 +2,56 @@
     box-sizing: border-box;
     margin: 0;
     padding: 20px;
-    background-color: #00916e;
-    color: #feefe5;
 }
-
+body {
+    font-family: "Rosarivo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    background-color: grey;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #header {
-    display: flex; /* Utilizza flexbox */
-    align-items: center; /* Allinea gli elementi verticalmente */
-    padding: 20px 0;
-    /* border: #ffd000 3px solid;
-    border-style: double;*/
-    box-shadow: #242318 5px 5px 5px;
-    background-color: #242318;
-    
-}
+    background-color: rgb(8, 8, 138);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Altezza fissa */
+    display: flex;
+    align-items: center;
+    justify-content: center;}
 #logo {
-    width: 100px; /* Imposta la larghezza desiderata per il logo */
-    height: auto;
-    margin-right: 20px; /* Aggiungi spazio a destra del logo */
-    box-shadow: #242318 2px 2px;
-    background-color: #feefe591;
+    height: 80px;
+}
+#title-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 #titleHeader {
-    font-size: 40px; /* Imposta la dimensione del titolo */
-    margin: 0; /* Rimuovi il margine per il titolo */
-    text-shadow: #242318 2px 2px;
-    background-color: none;
+    font-size: 20px;
+    text-shadow: 2px 2px #000000;
 }
-#subtitleHeader {
-    font-size: 20px; /* Imposta la dimensione del sottotitolo */
-    margin: 0; /* Rimuovi il margine per il sottotitolo */
-    text-shadow: #242318 2px 2px;
+#description {
+    margin-top: 20px;
+    text-align: center;
+    border: #ffd000 3px solid;
+    border-style: double double none;
+    width: 75%;
+}
+#news {        
+    font-size: 50px;
+}
+#news-container {
+    justify-content: center;
+    padding-top: 20px;
+    border-style:none double double;
+    width: 75%;
 }
 
 .advanced {
@@ -76,13 +95,13 @@ footer {
     height: 50px;
     padding-top: 30px;
     text-align: center;
-  }
+}
 
 @media only screen and (min-width: 961px) {
     body {
         font-size: 2rem;
     }
-
+   
     #load-more-btn {
         font-size: 1rem;
     }
@@ -107,7 +126,6 @@ footer {
         width: 100%;
         height: 100%;
     }
-
     #news-container {
         float: center;
         justify-content: center;
@@ -124,9 +142,34 @@ footer {
         width: 100%;
         height: 85%;
     }
-
-    #news-container {
-        font-size: 1rem;
-        padding: 5px;
+    #header {
+        background-color: rgb(8, 8, 138);
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px; /* Altezza fissa */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px; /* Aggiunto padding per allineare il contenuto */
     }
+    #logo {
+        height: 80px; /* Ridotto l'altezza del logo */
+    }
+    .title-wrapper {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex-grow: 1; /* Fai espandere il wrapper per riempire lo spazio rimanente */
+    }
+    #titleHeader {
+        margin: 0;
+        font-size: 14px; /* Ridotto il font size per adattarsi alla dimensione */
+    }
+    #news {        
+        font-size: 30px;
+    }
+    
 }
