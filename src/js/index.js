@@ -1,3 +1,5 @@
+import "../css/style.css"
+
 document.addEventListener('DOMContentLoaded', () => {
     const newsContainer = document.getElementById('news-container')
     const loadMoreBtn = document.getElementById('load-more-btn')
@@ -25,9 +27,10 @@ function getNews(ids) {
 function getNewsOnScreen(Array) {
   Array.forEach(item => {
     const newsItem = document.createElement('div')
-    newsItem.innerHTML = `<h3>${item.title}</h3>
+    newsItem.id="news-item";
+    newsItem.innerHTML = `<h3 id="news-title">${item.title}</h3>
     <a id="anchor" href="${item.url}" target="_blank">Click here to read</a>
-    <p>Date: ${new Date(item.time * 1000).toLocaleString()}</p>`
+    <p id="news-date">Date: ${new Date(item.time * 1000).toLocaleString()}</p>`
     newsContainer.appendChild(newsItem)
     })
 }

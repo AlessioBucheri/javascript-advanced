@@ -4,11 +4,7 @@
     padding: 20px;
 }
 body {
-    font-family: "Rosarivo", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(148, 178, 214);
     color: black;
     display: flex;
     flex-direction: column;
@@ -34,34 +30,67 @@ body {
     align-items: center;
 }
 #titleHeader {
+    font-family: "Courier Prime", monospace;
+    font-weight: 300;
+    font-style: normal;
     font-size: 20px;
     text-shadow: 2px 2px #000000;
 }
 #description {
     text-align: center;
-    border: rgb(8, 8, 138) 3px solid;
-    border-style: none solid none;
     width: 75%;
 }
 #news {        
     font-size: 30px;
 }
 #news-description {
-    text-align: center;
-    font-size: 30px;
+    font-family: "Courier Prime", monospace;
+    font-weight: 300;
+    font-style: normal;
+    font-style: normal;
+    font-size: 20px;
 }
 #news-container {
+    font-family: "Courier Prime", monospace;
+    font-weight: 300;
+    font-style: normal;
     justify-content: center;
     padding-top: 20px;
-    border: rgb(8, 8, 138) 3px solid;
-    border-style: none solid solid;
     width: 75%;
 }
 .advanced {
     padding-top: 20px;
 }
+#news-item {
+    background-color: rgba(255, 255, 255, 0.381);
+    border: solid 2px black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+}
 #anchor {
-    color: #242318; 
+    font-family: "Courier Prime", monospace;
+    font-weight: 300;
+    font-style: normal;
+    background-color: rgb(148, 178, 214);
+    text-decoration: none;
+    color: black;
+    border: solid 2px black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+}
+#anchor:hover {
+    background-color: rgb(8, 8, 138);
+    color: white;
+}  
+#anchor:active {
+    background-color: rgb(158, 158, 158);
+    transition: 0.2s;
+} 
+#news-date {
+    text-align: center;
 }
 #load-more-btn {
     display: block;
@@ -72,28 +101,36 @@ body {
     justify-content: center;
     align-items: center;
     float: center;
-    border: 2px solid rgb(8, 8, 138);
+    border: 2px solid black;
     cursor: pointer;
     padding: 20px;
     text-align: center;
     transition-duration: 0.5s;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(146, 170, 207);
+
 }
 #load-more-btn:hover {
-    background-color: rgb(8, 8, 138); /* Red */
+    background-color: rgb(8, 8, 138);
     color: white;
 }  
 #load-more-btn:active {
     background-color: rgb(158, 158, 158);
     transition: 0.2s;
 }  
-footer {
-    float: center;
-    height: 50px;
-    padding-top: 30px;
-    text-align: center;
+#footer {
+    background-color: rgb(8, 8, 138);
+    color: white;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; /* Altezza fissa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px; /* Aggiunto padding per allineare il contenuto */
 }
-
 @media only screen and (min-width: 961px) {
     body {
         font-size: 2rem;
