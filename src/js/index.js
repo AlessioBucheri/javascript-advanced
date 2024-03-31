@@ -1,5 +1,7 @@
 import "../css/style.css"
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const newsContainer = document.getElementById('news-container')
     const loadMoreBtn = document.getElementById('load-more-btn')

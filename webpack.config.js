@@ -44,7 +44,15 @@ const config = {
             },
             {
                 test: /\.(jpg|png|svg|gif|jpeg)$/i,
-                type: 'asset/resource'
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'img/',
+                        }
+                    },
+                ]
             }
         ],
     },
