@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const isProduction = process.env.NODE_ENV == 'production';
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
+const CopyPlugin = require("copy-webpack-plugin");
 
 const config = {
     entry: './src/js/index.js',
@@ -18,6 +19,12 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html',
+        }),
+
+        new CopyPlugin({
+            patterns: [
+              { from: "./src/img", to: "./dist" },
+            ],
         }),
 
         // Add your plugins here
