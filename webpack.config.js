@@ -3,13 +3,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 const isProduction = process.env.NODE_ENV == 'production';
-
-
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
-
-
 
 const config = {
     entry: './src/js/index.js',
@@ -44,20 +39,11 @@ const config = {
             },
             {
                 test: /\.(jpg|png|svg|gif|jpeg)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'img/',
-                        }
-                    },
-                ]
+                type: 'asset/resource',
             }
         ],
     },
 };
-
 module.exports = () => {
     if (isProduction) {
         config.mode = 'production';

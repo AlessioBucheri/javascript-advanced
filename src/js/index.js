@@ -1,7 +1,5 @@
 import "../css/style.css"
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const newsContainer = document.getElementById('news-container')
     const loadMoreBtn = document.getElementById('load-more-btn')
@@ -53,3 +51,7 @@ callFetch('https://hacker-news.firebaseio.com/v0/newstories.json')
   })
   .catch(error => console.error('Error fetching news IDs:', error))
 })
+
+import logoFn from '../img/logo.svg';
+
+document.body.header.appendChild(logoFn());
