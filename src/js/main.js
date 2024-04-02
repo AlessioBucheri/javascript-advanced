@@ -26,7 +26,6 @@ function getNewsOnScreen(Array) {
   Array.forEach(item => {
     if (item.url) {
     const newsItem = document.createElement('div')
-    console.log(item.url);
     newsItem.id="news-item";
     newsItem.innerHTML = `<h3 id="news-title">${item.title}</h3>
     <a id="anchor" href="${item.url}" target="_blank">Click here to read</a>
