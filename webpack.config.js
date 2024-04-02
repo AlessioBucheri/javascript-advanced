@@ -23,7 +23,7 @@ const config = {
 
         new CopyPlugin({
             patterns: [
-              { from: "./src/img", to: "./dist" },
+              { from: "./src/img", to: "img" },
             ],
         }),
 
@@ -37,17 +37,9 @@ const config = {
                 loader: 'babel-loader',
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-                type: 'asset',
-            },
-            {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
-            {
-                test: /\.(jpg|png|svg|gif|jpeg)$/i,
-                type: 'asset/resource',
-            }
         ],
     },
 };
