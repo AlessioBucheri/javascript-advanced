@@ -1,7 +1,3 @@
-[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
-
-
 # 🚀 Hacker Service News
 > A simple website to find the latest tech news around web
 
@@ -17,7 +13,7 @@ https://hackerservicenews.netlify.app/
 [MIT](https://choosealicense.com/licenses/mit/)
 
 # Contact
-Send me a message here:
+Send me a message here: </br>
 Linkedin: https://www.linkedin.com/in/alessio-bucheri-462721214/
 
 ## Autori e Copyright
