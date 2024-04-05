@@ -23,14 +23,17 @@ function getNews(ids) {
 // Funzione che renderizza le notizie
 function getNewsOnScreen(Array) {
   Array.forEach(item => {
-    if (item.url) {
+    const title = _.get(item, 'title', 'Untitled');
+    const url = _.get (item, 'url');
+    const time = new Date(_.get(item, 'time', 0) *1000).toLocaleString();
+
     const newsItem = document.createElement('div')
     newsItem.id="news-item";
     newsItem.innerHTML = `<h3 id="news-title">${item.title}</h3>
     <a id="anchor" href="${item.url}" target="_blank" rel=”noopener noreferrer”>Click here to read</a>
     <p id="news-date">Date: ${new Date(item.time * 1000).toLocaleString()}</p>`
     newsContainer.appendChild(newsItem)
-    }})
+  })
 }
 
 // Richiamo la function per fetchare l'API globale
