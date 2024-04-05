@@ -51,5 +51,8 @@ callAxios('https://hacker-news.firebaseio.com/v0/newstories.json')
     startIndex += batchSize
     });
   })
-  .catch(error => console.error('Error fetching news IDs:', error))
+
+  if (_.isUndefined(newsId)){
+    console.error('No news found');
+  }
 })
