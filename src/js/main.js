@@ -5,19 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const batchSize = 10
 
 // Funzione per fetchare
-function callFetch(url) {
-  return fetch(url)
-    .then(response => response.json())
+function callAxios(url) {
+  return axios.get(url);
 }
-
 // Funzione per fetchare i dettagli dell'API globale
 function getNews(ids) {
   const promises = ids.slice(startIndex, startIndex + batchSize)
-    .map(id => callFetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`))
+    .map(id => callAxios(`https://hacker-news.firebaseio.com/v0/item/${id}.json`))
      
-  Promise.all(promises)
-    .then(news => {
-     getNewsOnScreen(news)})  
+  axios.all(promises)
+    .then(axios.spread((...responses) => {
+     const news = responses.map(response => response.data);
+     getNewsOnScreen(news)}))  
     .catch(error => console.error('Error fetching news:', error))
 }
   
@@ -35,8 +34,9 @@ function getNewsOnScreen(Array) {
 }
 
 // Richiamo la function per fetchare l'API globale
-callFetch('https://hacker-news.firebaseio.com/v0/newstories.json')
-  .then(newsIds => {
+callAxios('https://hacker-news.firebaseio.com/v0/newstories.json')
+  .then(response => {
+    const newsIds = response.data;
 
 // Richiamo la function che carica le prime 10 notizie
   getNews(newsIds)
