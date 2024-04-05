@@ -50,9 +50,9 @@ callAxios('https://hacker-news.firebaseio.com/v0/newstories.json')
     getNews(newsIds)
     startIndex += batchSize
     });
-  })
 
   if (_.isUndefined(newsIds)){
     console.error('No news found');
   }
+  });
 })
