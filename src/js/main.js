@@ -28,7 +28,7 @@ function getNewsOnScreen(Array) {
     const newsItem = document.createElement('div')
     newsItem.id="news-item";
     newsItem.innerHTML = `<h3 id="news-title">${item.title}</h3>
-    <a id="anchor" href="${item.url}" target="_blank">Click here to read</a>
+    <a id="anchor" href="${item.url}" target="_blank" rel=”noopener noreferrer”>Click here to read</a>
     <p id="news-date">Date: ${new Date(item.time * 1000).toLocaleString()}</p>`
     newsContainer.appendChild(newsItem)
     }})
