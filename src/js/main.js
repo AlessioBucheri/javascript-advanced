@@ -52,7 +52,7 @@ callAxios('https://hacker-news.firebaseio.com/v0/newstories.json')
     });
   })
 
-  if (_.isUndefined(newsId)){
+  if (_.isUndefined(newsIds)){
     console.error('No news found');
   }
 })
